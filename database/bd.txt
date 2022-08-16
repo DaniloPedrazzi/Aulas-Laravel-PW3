@@ -4,7 +4,7 @@ use bdlaravel;
 create table tbCliente(
     idCliente int primary key auto_increment
     ,nome varchar(50)
-    ,dtNasc date
+    ,dtNasc varchar(50)
     ,estadoCivil varchar(50)
     ,endereco varchar(50)
     ,numero int
@@ -12,8 +12,8 @@ create table tbCliente(
     ,cep int
     ,cidade varchar(50)
     ,estado varchar(50)
-    ,rg int
-    ,cpf int
+    ,rg varchar(50)
+    ,cpf varchar(50)
     ,email varchar(50)
     ,fone int
     ,celular int
@@ -28,17 +28,30 @@ create table tbProduto(
     idProduto int primary key auto_increment
     ,produto varchar(50)
     ,valor int
+    ,idCategoria int
     ,foreign key(idCategoria) references tbCategoria(idCategoria)
 );
 
 create table tbPedido(
     idPedido int primary key auto_increment
+    ,idCliente int
     ,foreign key(idCliente) references tbCliente(idCliente)
+    ,endereco varchar(50)
     ,foreign key(endereco) references tbCliente(endereco)
+    ,numero int
     ,foreign key(numero) references tbCliente(numero)
+    ,complemento int
     ,foreign key(complemento) references tbCliente(complemento)
+    ,cep int
     ,foreign key(cep) references tbCliente(cep)
+    ,idProduto int
     ,foreign key(idProduto) references tbProduto(idProduto)
+    ,valor int
     ,foreign key(valor) references tbProduto(valor)
+    ,produto varchar(50)
     ,foreign key(produto) references tbProduto(produto)
+);
+
+INSERT INTO tbCliente VALUES(
+    null, 'Danilo', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '932804423980', '90343237823', 'danilo.justino1@gmail.com', 980423, 9870243980324
 );
