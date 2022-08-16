@@ -1,0 +1,44 @@
+create database bdlaravel;
+use bdlaravel;
+
+create table tbCliente(
+    idCliente int primary key auto_increment
+    ,nome varchar(50)
+    ,dtNasc date
+    ,estadoCivil varchar(50)
+    ,endereco varchar(50)
+    ,numero int
+    ,complemento int
+    ,cep int
+    ,cidade varchar(50)
+    ,estado varchar(50)
+    ,rg int
+    ,cpf int
+    ,email varchar(50)
+    ,fone int
+    ,celular int
+);
+
+create table tbCategoria(
+    idCategoria int primary key auto_increment
+    ,categoria varchar(50)
+);
+
+create table tbProduto(
+    idProduto int primary key auto_increment
+    ,produto varchar(50)
+    ,valor int
+    ,foreign key(idCategoria) references tbCategoria(idCategoria)
+);
+
+create table tbPedido(
+    idPedido int primary key auto_increment
+    ,foreign key(idCliente) references tbCliente(idCliente)
+    ,foreign key(endereco) references tbCliente(endereco)
+    ,foreign key(numero) references tbCliente(numero)
+    ,foreign key(complemento) references tbCliente(complemento)
+    ,foreign key(cep) references tbCliente(cep)
+    ,foreign key(idProduto) references tbProduto(idProduto)
+    ,foreign key(valor) references tbProduto(valor)
+    ,foreign key(produto) references tbProduto(produto)
+);
