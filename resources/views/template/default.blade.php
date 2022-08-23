@@ -8,20 +8,22 @@
     <link rel="stylesheet" href="{{url('css/default.css')}}">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li> <a href="/">Home</a> </li>
-                <li> <a href="/contato">Contato</a> </li>
-                <li> <a href="/cliente">Cliente</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="header">
+        <a href="/" class="logo">Bonoro.net</a>
+        <div class="header-right">
+            <a href="/">Home</a>
+            <a href="/categoria">Categoria</a>
+            <a href="/cliente">Cliente</a>
+            <a href="/pedido">Pedido</a>
+            <a href="/produto">Produto</a>
+        </div>
+    </div>
 
     @yield('content')
 
     <footer>
-        All Rights Reserved
+        <hr>
+        <p>All Rights Reserved</p>
     </footer>
 
 </body>

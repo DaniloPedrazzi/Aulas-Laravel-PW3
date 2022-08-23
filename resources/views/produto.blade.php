@@ -2,8 +2,7 @@
 @section('content')
 
     <section>
-        <h1>Home</h1>
-        <img src="{{url('assets/bonoro.jpg')}}">
+        <h1>Produto</h1>
     </section>
 
 @endsection

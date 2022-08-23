@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/produto', function () {
+    return view('produto');
 });
-Route::get('/contato', function () {
-    return view('contato');
+Route::get('/pedido', function () {
+    return view('pedido');
+});
+Route::get('/categoria', function () {
+    return view('categoria');
 });
 Route::get('/cliente', function () {
     return view('cliente');

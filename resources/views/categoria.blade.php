@@ -2,7 +2,7 @@
 @section('content')
 
     <section>
-        <h1>Contato</h1>
+        <h1>Categoria</h1>
     </section>
 
 @endsection

@@ -26,9 +26,9 @@ create table tbCategoria(
 
 create table tbProduto(
     idProduto int primary key auto_increment
+    ,idCategoria int
     ,produto varchar(50)
     ,valor int
-    ,idCategoria int
     ,foreign key(idCategoria) references tbCategoria(idCategoria)
 );
 
@@ -53,5 +53,41 @@ create table tbPedido(
 );
 
 INSERT INTO tbCliente VALUES(
-    null, 'Danilo', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '932804423980', '90343237823', 'danilo.justino1@gmail.com', 980423, 9870243980324
+    null, 'Danilo', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '93280980', '9034323', 'danilo.justino1@gmail.com', 980423, 987024 
+);
+INSERT INTO tbCliente VALUES(
+    null, 'João', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '93280980', '9034323', 'danilo.justino1@gmail.com', 980423, 987024 
+);
+INSERT INTO tbCliente VALUES(
+    null, 'Anderson', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '93280980', '9034323', 'danilo.justino1@gmail.com', 980423, 987024 
+);
+
+INSERT INTO tbCategoria VALUES(
+    null, 'Tecnologia'
+);
+INSERT INTO tbCategoria VALUES(
+    null, 'Comida'
+);
+INSERT INTO tbCategoria VALUES(
+    null, 'Brinquedo'
+);
+
+INSERT INTO tbProduto VALUES(
+    null, 1, 'smartphone', 10300
+);
+INSERT INTO tbProduto VALUES(
+    null, 2, 'chocolate', 13
+);
+INSERT INTO tbProduto VALUES(
+    null, 3, 'nerf', 230
+);
+
+INSERT INTO tbPedido VALUES(
+    null, 1, 1, 1, 1, 1, 1, 1, 1
+);
+INSERT INTO tbPedido VALUES(
+    null, 2, 2, 2, 2, 2, 2, 2, 2
+);
+INSERT INTO tbPedido VALUES(
+    null, 3, 3, 3, 3, 3, 3, 3, 3
 );
