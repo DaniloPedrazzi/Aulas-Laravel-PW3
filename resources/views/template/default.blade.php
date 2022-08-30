@@ -23,7 +23,7 @@
 
     <footer>
         <hr>
-        <p>All Rights Reserved</p>
+        <p>All Rights Reserved--2022</p>
     </footer>
 
 </body>
