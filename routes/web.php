@@ -11,6 +11,10 @@
 |
 */
 
+//MODEL
+Route::get('/clienteBD','ClienteController@index');
+
+//VIEW
 Route::get('/produto', function () {
     return view('produto');
 });

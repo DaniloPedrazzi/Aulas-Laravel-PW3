@@ -1,5 +1,5 @@
-create database bdlaravel;
-use bdlaravel;
+create database laravel;
+use laravel;
 
 create table tbCliente(
     idCliente int primary key auto_increment

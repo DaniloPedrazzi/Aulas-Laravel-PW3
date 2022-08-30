@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-        <a href="/" class="logo">Bonoro.net</a>
+        <a href="/" class="logo">Molusco.net</a>
         <div class="header-right">
             <a href="/">Home</a>
             <a href="/categoria">Categoria</a>
