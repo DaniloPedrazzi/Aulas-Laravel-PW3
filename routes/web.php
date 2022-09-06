@@ -12,21 +12,12 @@
 */
 
 //MODEL
-Route::get('/clienteBD','ClienteController@index');
+Route::get('/cliente','ClienteController@index');
+Route::get('/categoria','categoriaController@index');
+Route::get('/pedido','pedidoController@index');
+Route::get('/produto','produtoController@index');
 
 //VIEW
-Route::get('/produto', function () {
-    return view('produto');
-});
-Route::get('/pedido', function () {
-    return view('pedido');
-});
-Route::get('/categoria', function () {
-    return view('categoria');
-});
-Route::get('/cliente', function () {
-    return view('cliente');
-});
 Route::get('/', function () {
     return view('index');
 });

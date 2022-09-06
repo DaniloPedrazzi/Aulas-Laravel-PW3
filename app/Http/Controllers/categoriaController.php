@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ClienteModel;
+use App\categoriaModel;
 
-class ClienteController extends Controller
+class categoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $cliente = ClienteModel::all(); //SELECT *
-        return view('cliente', compact('cliente'));
+        $categoria = categoriaModel::all(); //SELECT *
+        return view('categoria', compact('categoria'));
     }
 
     /**

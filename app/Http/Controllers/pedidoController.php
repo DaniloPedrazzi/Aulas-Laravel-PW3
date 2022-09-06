@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ClienteModel;
+use App\pedidoModel;
 
-class ClienteController extends Controller
+class pedidoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,20 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $cliente = ClienteModel::all(); //SELECT *
-        return view('cliente', compact('cliente'));
+        $pedido = pedidoModel::all(); //SELECT *
+        return view('pedido', compact('pedido'));
+
+        // foreach ($pedido as $c) {
+        //     echo "<h1>".$c->idPedido."</h1>";
+        //     echo $c->idCliente ."<br>";
+        //     echo $c->endereco ."<br>";
+        //     echo $c->numero ."<br>";
+        //     echo $c->complemento ."<br>";
+        //     echo $c->cep ."<br>";
+        //     echo $c->idProduto ."<br>";
+        //     echo $c->valor ."<br>";
+        //     echo $c->produto ."<br>";
+        // }
     }
 
     /**

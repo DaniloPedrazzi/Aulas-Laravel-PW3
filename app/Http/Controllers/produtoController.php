@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ClienteModel;
+use App\produtoModel;
 
-class ClienteController extends Controller
+class produtoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,15 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $cliente = ClienteModel::all(); //SELECT *
-        return view('cliente', compact('cliente'));
+        $produto = produtoModel::all(); //SELECT *
+        return view('produto', compact('produto'));
+
+        // foreach ($produto as $c) {
+        //     echo "<h1>".$c->produto."</h1>";
+        //     echo $c->valor ."<br>";
+        //     echo $c->idProduto ."<br>";
+        //     echo $c->idCategoria ."<br>";
+        // }
     }
 
     /**
