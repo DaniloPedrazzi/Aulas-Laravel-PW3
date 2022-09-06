@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{url('css/default.css')}}">
+    <link rel="stylesheet" href=",">
 </head>
 <body>
     <div class="header">
@@ -16,6 +16,7 @@
             <a href="/cliente">Cliente</a>
             <a href="/pedido">Pedido</a>
             <a href="/produto">Produto</a>
+            <a href="/contato">Contato</a>
         </div>
     </div>
 
