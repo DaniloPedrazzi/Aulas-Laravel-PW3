@@ -49,3 +49,20 @@ footer{
 img{
   border-radius: 15%;
 }
+spam{
+  color: #ddd;
+}
+
+input {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-top: 10px;
+  transition-duration: 0.2s;
+}
+
+input:hover {
+  background-color: #1c1c1c;
+  color: white;
+  transition-duration: 0.2s;
+}
