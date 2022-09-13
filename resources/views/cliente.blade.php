@@ -21,16 +21,8 @@
         @endforeach
     </section>
     <section>
-        <?php
-            if(@$_GET['id']){
-                $id = $_GET['id'];
-                $action="categoria-alterar.php?id=$id";
-            }else{
-                $action="categoria-salvar.php";
-            }
-        ?>
 
-        <form action="<?php echo $action?>" method="post"><br>
+        <form action="{{url('/contato/inserir')}}" method="post"><br>
             <div>
                 <input type="text" placeholder="Nome" name="txt_nome" value="<?php echo @$_GET['categoria'];?>">
                 <input type="text" placeholder="Data de Nascimento" name="txt_dtNasc" value="<?php echo @$_GET['categoria'];?>">

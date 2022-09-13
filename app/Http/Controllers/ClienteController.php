@@ -18,23 +18,32 @@ class ClienteController extends Controller
         return view('cliente', compact('cliente'));
     }
 
+    public function store(Request $request){
+        $cliente = new ClienteModel();
+        $cliente -> nome = $request->txt_nome;
+        $cliente -> dtNasc = $request->txt_dtNasc;
+        $cliente -> estadoCivil = $request->txt_estadoCivil;
+        $cliente -> endereco = $request->txt_endereco;
+        $cliente -> numero = $request->txt_numero;
+        $cliente -> complemento = $request->txt_complemento;
+        $cliente -> cep = $request->txt_cep;
+        $cliente -> cidade = $request->txt_cidade;
+        $cliente -> estado = $request->txt_estado;
+        $cliente -> rg = $request->txt_rg;
+        $cliente -> cpf = $request->txt_cpf;
+        $cliente -> email = $request->txt_email;
+        $cliente -> fone = $request->txt_fone;
+        $cliente -> celular = $request->txt_celular;
+        $cliente -> save();
+        return redirect("/cliente");
+    }
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
     {
         //
     }

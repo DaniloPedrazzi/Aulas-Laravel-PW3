@@ -18,10 +18,10 @@ class categoriaController extends Controller
     }
 
     public function store(Request $request){
-        $contato = new categoriaModel();
-        $contato -> categoria = $request->txt_Categoria;
-        $contato -> save();
-        return redirect("/contato");
+        $categoria = new categoriaModel();
+        $categoria -> categoria = $request->txt_Categoria;
+        $categoria -> save();
+        return redirect("/categoria");
     }
 
 
