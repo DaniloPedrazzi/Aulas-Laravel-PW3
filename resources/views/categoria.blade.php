@@ -9,16 +9,8 @@
         @endforeach
     </section>
     <section>
-        <?php
-            if(@$_GET['id']){
-                $id = $_GET['id'];
-                $action="categoria-alterar.php?id=$id";
-            }else{
-                $action="categoria-salvar.php";
-            }
-        ?>
-
-        <form action="<?php echo $action?>" method="post">
+        <form action="{{url('/contato/inserir')}}" method="post"><br>
+            {!! csrf_field() !!}
             <div>
                 <input type="text" placeholder="Categoria" name="txt_Categoria" value="<?php echo @$_GET['categoria'];?>">
             </div>

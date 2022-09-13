@@ -18,9 +18,9 @@
             }
         ?>
 
-        <form action="<?php echo $action?>" method="post">
+        <form action="<?php echo $action?>" method="post"><br>
             <div>
-                <input type="text" placeholder="Produto" name="txt_produto" value="<?php echo @$_GET['categoria'];?>">
+                <input type="text" placeholder="Produto" name="txt_produto" value="<?php echo @$_GET['categoria'];?>"><br>
                 <input type="text" placeholder="Valor" name="txt_valor" value="<?php echo @$_GET['categoria'];?>">
             </div>
             <input style="margin-bottom: 30px; margin-top: 15px" type="submit" value="Salvar">

@@ -17,6 +17,9 @@ Route::get('/categoria','categoriaController@index');
 Route::get('/pedido','pedidoController@index');
 Route::get('/produto','produtoController@index');
 
+//INSERT
+Route::post('/contato/inserir','categoriaController@store');
+
 //VIEW
 Route::get('/', function () {
     return view('index');

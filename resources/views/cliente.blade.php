@@ -30,20 +30,20 @@
             }
         ?>
 
-        <form action="<?php echo $action?>" method="post">
+        <form action="<?php echo $action?>" method="post"><br>
             <div>
                 <input type="text" placeholder="Nome" name="txt_nome" value="<?php echo @$_GET['categoria'];?>">
                 <input type="text" placeholder="Data de Nascimento" name="txt_dtNasc" value="<?php echo @$_GET['categoria'];?>">
-                <input type="text" placeholder="Estado Civil" name="txt_estadoCivil" value="<?php echo @$_GET['categoria'];?>">
+                <input type="text" placeholder="Estado Civil" name="txt_estadoCivil" value="<?php echo @$_GET['categoria'];?>"><br>
                 <input type="text" placeholder="Endereço" name="txt_endereco" value="<?php echo @$_GET['categoria'];?>">
                 <input type="text" placeholder="Número" name="txt_numero" value="<?php echo @$_GET['categoria'];?>">
-                <input type="text" placeholder="Complemento" name="txt_complemento" value="<?php echo @$_GET['categoria'];?>">
+                <input type="text" placeholder="Complemento" name="txt_complemento" value="<?php echo @$_GET['categoria'];?>"><br>
                 <input type="text" placeholder="CEP" name="txt_cep" value="<?php echo @$_GET['categoria'];?>">
                 <input type="text" placeholder="Cidade" name="txt_cidade" value="<?php echo @$_GET['categoria'];?>">
-                <input type="text" placeholder="Estado" name="txt_estado" value="<?php echo @$_GET['categoria'];?>">
+                <input type="text" placeholder="Estado" name="txt_estado" value="<?php echo @$_GET['categoria'];?>"><br>
                 <input type="text" placeholder="RG" name="txt_rg" value="<?php echo @$_GET['categoria'];?>">
                 <input type="text" placeholder="CPF" name="txt_cpf" value="<?php echo @$_GET['categoria'];?>">
-                <input type="text" placeholder="Email" name="txt_email" value="<?php echo @$_GET['categoria'];?>">
+                <input type="text" placeholder="Email" name="txt_email" value="<?php echo @$_GET['categoria'];?>"><br>
                 <input type="text" placeholder="Telefone" name="txt_fone" value="<?php echo @$_GET['categoria'];?>">
                 <input type="text" placeholder="Celular" name="txt_celular" value="<?php echo @$_GET['categoria'];?>">
             </div>

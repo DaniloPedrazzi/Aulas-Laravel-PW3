@@ -14,7 +14,7 @@
             <a href="/">Home</a>
             <a href="/categoria">Categoria</a>
             <a href="/cliente">Cliente</a>
-            <a href="/pedido">Pedido</a>
+            <!-- <a href="/pedido">Pedido</a> -->
             <a href="/produto">Produto</a>
             <a href="/contato">Contato</a>
         </div>

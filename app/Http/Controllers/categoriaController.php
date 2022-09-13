@@ -12,11 +12,18 @@ class categoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
         $categoria = categoriaModel::all(); //SELECT *
         return view('categoria', compact('categoria'));
     }
+
+    public function store(Request $request){
+        $contato = new categoriaModel();
+        $contato -> categoria = $request->txt_Categoria;
+        $contato -> save();
+        return redirect("/contato");
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -24,17 +31,6 @@ class categoriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
     {
         //
     }
