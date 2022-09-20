@@ -5,7 +5,7 @@
         <h1>Contato</h1>
     </section>
     <section>
-        <form action="<?php echo $action?>" method="post"><br>
+        <form action="" method="post"><br>
             <div>
                 <input type="text" placeholder="Nome" name="txt_nome" value="<?php echo @$_GET['categoria'];?>"><br>
                 <input type="text" placeholder="Email" name="txt_email" value="<?php echo @$_GET['categoria'];?>"><br>

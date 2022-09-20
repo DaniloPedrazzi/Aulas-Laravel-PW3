@@ -18,7 +18,7 @@ Route::get('/pedido','pedidoController@index');
 Route::get('/produto','produtoController@index');
 
 //INSERT
-Route::post('/contato/inserir','categoriaController@store');
+Route::post('/categoria/inserir','categoriaController@store');
 Route::post('/cliente/inserir','ClienteController@store');
 Route::post('/produto/inserir','produtoController@store');
 

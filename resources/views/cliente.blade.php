@@ -22,7 +22,8 @@
     </section>
     <section>
 
-        <form action="{{url('/contato/inserir')}}" method="post"><br>
+        <form action="{{url('/cliente/inserir')}}" method="post"><br>
+        {!! csrf_field() !!}
             <div>
                 <input type="text" placeholder="Nome" name="txt_nome" value="<?php echo @$_GET['categoria'];?>">
                 <input type="text" placeholder="Data de Nascimento" name="txt_dtNasc" value="<?php echo @$_GET['categoria'];?>">

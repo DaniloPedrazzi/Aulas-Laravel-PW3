@@ -9,7 +9,7 @@
         @endforeach
     </section>
     <section>
-        <form action="{{url('/contato/inserir')}}" method="post"><br>
+        <form action="{{url('/categoria/inserir')}}" method="post"><br>
             {!! csrf_field() !!}
             <div>
                 <input type="text" placeholder="Categoria" name="txt_Categoria" value="<?php echo @$_GET['categoria'];?>">
