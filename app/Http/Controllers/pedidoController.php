@@ -16,18 +16,6 @@ class pedidoController extends Controller
     {
         $pedido = pedidoModel::all(); //SELECT *
         return view('pedido', compact('pedido'));
-
-        // foreach ($pedido as $c) {
-        //     echo "<h1>".$c->idPedido."</h1>";
-        //     echo $c->idCliente ."<br>";
-        //     echo $c->endereco ."<br>";
-        //     echo $c->numero ."<br>";
-        //     echo $c->complemento ."<br>";
-        //     echo $c->cep ."<br>";
-        //     echo $c->idProduto ."<br>";
-        //     echo $c->valor ."<br>";
-        //     echo $c->produto ."<br>";
-        // }
     }
 
     /**
@@ -36,17 +24,6 @@ class pedidoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
     {
         //
     }

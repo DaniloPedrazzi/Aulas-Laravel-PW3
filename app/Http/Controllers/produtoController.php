@@ -16,13 +16,14 @@ class produtoController extends Controller
     {
         $produto = produtoModel::all(); //SELECT *
         return view('produto', compact('produto'));
+    }
 
-        // foreach ($produto as $c) {
-        //     echo "<h1>".$c->produto."</h1>";
-        //     echo $c->valor ."<br>";
-        //     echo $c->idProduto ."<br>";
-        //     echo $c->idCategoria ."<br>";
-        // }
+    public function store(Request $request){
+        $produto = new produtoModel();
+        $produto -> produto = $request->txt_produto;
+        $produto -> valor = $request->txt_valor;
+        $produto -> save();
+        return redirect("/produto");
     }
 
     /**
@@ -31,17 +32,6 @@ class produtoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
     {
         //
     }

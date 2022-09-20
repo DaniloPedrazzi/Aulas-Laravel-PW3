@@ -5,15 +5,6 @@
         <h1>Contato</h1>
     </section>
     <section>
-        <?php
-            if(@$_GET['id']){
-                $id = $_GET['id'];
-                $action="categoria-alterar.php?id=$id";
-            }else{
-                $action="categoria-salvar.php";
-            }
-        ?>
-
         <form action="<?php echo $action?>" method="post"><br>
             <div>
                 <input type="text" placeholder="Nome" name="txt_nome" value="<?php echo @$_GET['categoria'];?>"><br>

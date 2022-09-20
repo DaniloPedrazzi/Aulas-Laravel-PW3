@@ -20,6 +20,7 @@ Route::get('/produto','produtoController@index');
 //INSERT
 Route::post('/contato/inserir','categoriaController@store');
 Route::post('/cliente/inserir','ClienteController@store');
+Route::post('/produto/inserir','produtoController@store');
 
 //VIEW
 Route::get('/', function () {
