@@ -4,9 +4,19 @@
     <section>
         <h1>Produto</h1>
         @foreach ($produto as $p) 
-            <h1>{{$p->produto}}</h1>
-            <spam>{{$p->valor}}</spam><br>
-            <a href="/produto/exclude/{{$p->idProduto}}" style="color: red">Excluir</a>
+            <center>
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>{{$p->produto}}</td>
+                    <td>{{$p->valor}}</td>
+                    <td><a href="/produto/exclude/{{$p->idProduto}}" style="color: red">Excluir</a></td>
+                </tr>
+            </table>
+            </center>
         @endforeach
     </section>
     <section>

@@ -3,10 +3,21 @@
 
     <section>
         <h1>Categoria</h1>
+        
         @foreach ($categoria as $c)
-            <h1>{{$c->categoria}}</h1>
-            <spam>{{$c->idCategoria}}</spam><br>
-            <a href="/categoria/exclude/{{$c->idCategoria}}" style="color: red">Excluir</a>
+            <center>
+                <table>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>ID</th>
+                    </tr>
+                    <tr>
+                        <td>{{$c->categoria}}</td>
+                        <td>{{$c->idCategoria}}</td>
+                        <td><a href="/categoria/exclude/{{$c->idCategoria}}" style="color: red">Excluir</a></td>
+                    </tr>
+                </table>
+            </center>
         @endforeach
     </section>
     <section>

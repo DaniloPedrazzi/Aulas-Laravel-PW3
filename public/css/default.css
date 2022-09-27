@@ -67,3 +67,14 @@ input:hover {
   color: white;
   transition-duration: 0.2s;
 }
+
+table, td, th {
+  padding: 10px 15px;
+  color: white;
+  border: 1px solid;
+}
+
+table {
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}

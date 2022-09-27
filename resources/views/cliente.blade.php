@@ -3,22 +3,44 @@
 
     <section>
         <h1>Cliente</h1>
-        @foreach ($cliente as $c) 
-            <h1>{{$c->nome}}</h1>
-            <spam>{{$c->dtNasc}}</spam><br>
-            <spam>{{$c->estadoCivil}}</spam><br>
-            <spam>{{$c->endereco}}</spam><br>
-            <spam>{{$c->numero}}</spam><br>
-            <spam>{{$c->complemento}}</spam><br>
-            <spam>{{$c->cep}}</spam><br>
-            <spam>{{$c->cidade}}</spam> <br>
-            <spam>{{$c->estado}}</spam> <br>
-            <spam>{{$c->rg}}</spam> <br>
-            <spam>{{$c->cpf}}</spam> <br>
-            <spam>{{$c->email}}</spam> <br>
-            <spam>{{$c->fone}}</spam> <br>
-            <spam>{{$c->celular}}</spam> <br>
-            <a href="/cliente/exclude/{{$c->idCliente}}" style="color: red">Excluir</a>
+        @foreach ($cliente as $c)
+            <center>
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data de Nasc</th>
+                        <th>Estado Civil</th>
+                        <th>Endereço</th>
+                        <th>Numero</th>
+                        <th>Complemento</th>
+                        <th>CEP</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>RG</th>
+                        <th>CPF</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Celular</th>
+                    </tr>
+                    <tr> 
+                        <td>{{$c->nome}}</td>
+                        <td>{{$c->dtNasc}}</td>
+                        <td>{{$c->estadoCivil}}</td>
+                        <td>{{$c->endereco}}</td>
+                        <td>{{$c->numero}}</td>
+                        <td>{{$c->complemento}}</td>
+                        <td>{{$c->cep}}</td>
+                        <td>{{$c->cidade}}</td>
+                        <td>{{$c->estado}}</td>
+                        <td>{{$c->rg}}</td>
+                        <td>{{$c->cpf}}</td>
+                        <td>{{$c->email}}</td>
+                        <td>{{$c->fone}}</td>
+                        <td>{{$c->celular}}</td>
+                        <td><a href="/cliente/exclude/{{$c->idCliente}}" style="color: red">Excluir</a></td>
+                    </tr>
+                </table>
+            </center>
         @endforeach
     </section>
     <section>
