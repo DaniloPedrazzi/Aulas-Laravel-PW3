@@ -7,13 +7,7 @@ use App\produtoModel;
 
 class produtoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+    public function index(){
         $produto = produtoModel::all(); //SELECT *
         return view('produto', compact('produto'));
     }
@@ -23,6 +17,11 @@ class produtoController extends Controller
         $produto -> produto = $request->txt_produto;
         $produto -> valor = $request->txt_valor;
         $produto -> save();
+        return redirect("/produto");
+    }
+
+    public function destroy($id){
+        produtoModel::where('idProduto', $id)->delete();
         return redirect("/produto");
     }
 
@@ -70,14 +69,4 @@ class produtoController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

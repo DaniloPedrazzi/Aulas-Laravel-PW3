@@ -6,6 +6,7 @@
         @foreach ($produto as $p) 
             <h1>{{$p->produto}}</h1>
             <spam>{{$p->valor}}</spam><br>
+            <a href="/produto/exclude/{{$p->idProduto}}" style="color: red">Excluir</a>
         @endforeach
     </section>
     <section>

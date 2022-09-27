@@ -18,6 +18,7 @@
             <spam>{{$c->email}}</spam> <br>
             <spam>{{$c->fone}}</spam> <br>
             <spam>{{$c->celular}}</spam> <br>
+            <a href="/cliente/exclude/{{$c->idCliente}}" style="color: red">Excluir</a>
         @endforeach
     </section>
     <section>

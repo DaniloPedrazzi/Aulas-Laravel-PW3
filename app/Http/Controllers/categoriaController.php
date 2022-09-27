@@ -24,6 +24,11 @@ class categoriaController extends Controller
         return redirect("/categoria");
     }
 
+    public function destroy($id){
+        categoriaModel::where('idCategoria', $id)->delete();
+        return redirect("/categoria");
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -65,17 +70,6 @@ class categoriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
     {
         //
     }

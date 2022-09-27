@@ -22,6 +22,12 @@ Route::post('/categoria/inserir','categoriaController@store');
 Route::post('/cliente/inserir','ClienteController@store');
 Route::post('/produto/inserir','produtoController@store');
 
+//EXCLUDE
+Route::get('/categoria/exclude/{id}','categoriaController@destroy');
+Route::get('/cliente/exclude/{id}','ClienteController@destroy');
+Route::get('/produto/exclude/{id}','produtoController@destroy');
+
+
 //VIEW
 Route::get('/', function () {
     return view('index');

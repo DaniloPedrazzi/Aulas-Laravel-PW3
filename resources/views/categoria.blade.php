@@ -5,7 +5,8 @@
         <h1>Categoria</h1>
         @foreach ($categoria as $c)
             <h1>{{$c->categoria}}</h1>
-            <spam>{{$c->idCategoria}}</spam>
+            <spam>{{$c->idCategoria}}</spam><br>
+            <a href="/categoria/exclude/{{$c->idCategoria}}" style="color: red">Excluir</a>
         @endforeach
     </section>
     <section>
