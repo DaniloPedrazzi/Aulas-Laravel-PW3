@@ -56,10 +56,10 @@ INSERT INTO tbCliente VALUES(
     null, 'Danilo', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '93280980', '9034323', 'danilo.justino1@gmail.com', 980423, 987024 
 );
 INSERT INTO tbCliente VALUES(
-    null, 'João', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '93280980', '9034323', 'danilo.justino1@gmail.com', 980423, 987024 
+    null, 'João', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '93280980', '9034323', 'joao.gomes@gmail.com', 980423, 987024 
 );
 INSERT INTO tbCliente VALUES(
-    null, 'Anderson', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '93280980', '9034323', 'danilo.justino1@gmail.com', 980423, 987024 
+    null, 'Anderson', '12/01/2005', 'solteiro', 'Rua tal do tal', 119288738, 721, 03531020, 'Sao Paulo', 'Sao Paulo', '93280980', '9034323', 'anderson.rodolfo@gmail.com', 980423, 987024 
 );
 
 INSERT INTO tbCategoria VALUES(
