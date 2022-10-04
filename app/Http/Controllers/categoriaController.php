@@ -12,9 +12,18 @@ class categoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-        $categoria = categoriaModel::all(); //SELECT *
-        return view('categoria', compact('categoria'));
+    //
+    public function index()
+    {
+        $categoria = categoriaModel::all();
+        // $categoria = categoriaModel::where('idCategoria',3)->get();
+        // $categoria = categoriaModel::where('categoria','Brinquedo')->get();        
+        // $categoria = categoriaModel::where('idCategoria','>',2)->get();
+        // $contato = categoriaModel::where('categoria','=','tecnologia')->get();
+        // $categoria = categoriaModel::where('idCategoria','>',0)->orderBy('categoria','desc')->get();
+        // $categoria = categoriaModel::where('idCategoria','>',0)->orderBy('categoria','asc')->get(); 
+
+        return view('categoria',compact('categoria'));
     }
 
     public function store(Request $request){
