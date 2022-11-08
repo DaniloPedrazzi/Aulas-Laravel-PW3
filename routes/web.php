@@ -27,6 +27,12 @@ Route::get('/categoria/exclude/{id}','categoriaController@destroy');
 Route::get('/cliente/exclude/{id}','ClienteController@destroy');
 Route::get('/produto/exclude/{id}','produtoController@destroy');
 
+//EDIT
+Route::get('/categoria/edit/{id}/editar','categoriaController@edit');
+Route::post('/categoria/alterar/{id}','categoriaController@update');
+Route::get('/produto/edit/{id}/editar','produtoController@edit');
+Route::post('/produto/alterar/{id}','produtoController@update');
+
 
 //VIEW
 Route::get('/', function () {

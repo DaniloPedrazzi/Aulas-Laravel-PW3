@@ -15,6 +15,7 @@
                         <td>{{$c->categoria}}</td>
                         <td>{{$c->idCategoria}}</td>
                         <td><a href="/categoria/exclude/{{$c->idCategoria}}" style="color: red">Excluir</a></td>
+                        <td><a href="/categoria/edit/{{$c->idCategoria}}/editar" style="color: yellow">Editar</a></td>
                     </tr>
                 </table>
             </center>

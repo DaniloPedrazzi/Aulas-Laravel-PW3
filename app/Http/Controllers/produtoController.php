@@ -22,51 +22,23 @@ class produtoController extends Controller
 
     public function destroy($id){
         produtoModel::where('idProduto', $id)->delete();
-        return redirect("/produto");
+        return redirect()->action('produtoController@index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $produto = produtoModel::find($id);
+        $title  = "Editar Nome {$produto->produto}";
+        $title  = "Editar Valor {$produto->valor}";
+        return view('produto-editar',compact('titles', 'produto'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $categoria = produtoModel::find($id);
+        $categoria->update(['produto'=>$request->txt_produto]);
+        $categoria->update(['valor'=>$request->txt_valor]);
+        return redirect()->action('produtoController@index');
     }
 
 }

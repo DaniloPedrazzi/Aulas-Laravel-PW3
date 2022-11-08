@@ -14,6 +14,7 @@
                     <td>{{$p->produto}}</td>
                     <td>{{$p->valor}}</td>
                     <td><a href="/produto/exclude/{{$p->idProduto}}" style="color: red">Excluir</a></td>
+                    <td><a href="/produto/edit/{{$p->idProduto}}/editar" style="color: yellow">Editar</a></td>
                 </tr>
             </table>
             </center>

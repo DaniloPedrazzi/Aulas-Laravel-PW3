@@ -9,4 +9,6 @@ class categoriaModel extends Model
     protected $table = "tbCategoria";
     protected $fillable = ['idCategoria','categoria'];
     public $timestamps = false;
+
+    protected $primaryKey = 'idCategoria';
 }

@@ -22,64 +22,33 @@ class categoriaController extends Controller
         // $contato = categoriaModel::where('categoria','=','tecnologia')->get();
         // $categoria = categoriaModel::where('idCategoria','>',0)->orderBy('categoria','desc')->get();
         // $categoria = categoriaModel::where('idCategoria','>',0)->orderBy('categoria','asc')->get(); 
-
+        
         return view('categoria',compact('categoria'));
     }
-
+    
     public function store(Request $request){
         $categoria = new categoriaModel();
         $categoria -> categoria = $request->txt_Categoria;
         $categoria -> save();
         return redirect("/categoria");
     }
-
+    
     public function destroy($id){
         categoriaModel::where('idCategoria', $id)->delete();
-        return redirect("/categoria");
+        return redirect()->action('categoriaController@index');
     }
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
-        //
+        $categoria = categoriaModel::find($id);
+        $title  = "Editar Categoria {$categoria->categoria}";
+        return view('categoria-editar',compact('titles', 'categoria'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $categoria = categoriaModel::find($id);
+        $categoria->update(['categoria'=>$request->txt_Categoria]);
+        return redirect()->action('categoriaController@index');
     }
 }
