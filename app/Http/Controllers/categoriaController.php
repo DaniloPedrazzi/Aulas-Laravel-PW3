@@ -51,4 +51,27 @@ class categoriaController extends Controller
         $categoria->update(['categoria'=>$request->txt_Categoria]);
         return redirect()->action('categoriaController@index');
     }
+
+    public function categoria(){
+        $categoria = categoriaModel::all();
+        return $categoria;
+    }
+
+    public function categoriaById($id){
+        $categoria = categoriaModel::where('idCategoria','=',$id)->get();        
+        return $categoria;        
+    }
+
+    public function categoriaSalvar(Request $request){
+
+        $categoria = new categoriaModel;
+
+        $categoria->categoria = $request->input('categoria');
+
+        $categoria -> save();
+    }
+
+    public function deleteCategoriaById($id){
+        categoriaModel::where('idCategoria',$id)->delete();
+    }
 }
